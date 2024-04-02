@@ -1,0 +1,20 @@
+{% extends "padre.html" %}
+
+{% load static %}
+
+{% block contenido %}
+
+    {% if servicios %}
+        <ul>
+        {% for servicio in servicios %}
+            <li>Nombre: {{servicio.nombre}} </li>
+            <li>Presentacion: {{servicio.presentacion}} </li>
+
+        {% endfor %}
+        </ul>
+    {% else%}
+        <p>No se encontraron servicios con ese nombre</p>    
+    {% endif %}
+
+    
+{% endblock %}

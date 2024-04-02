@@ -1,0 +1,17 @@
+{% extends "padre.html" %}
+
+{% load static %}
+
+{% block contenido %}
+    <form action="alta_servicio" method="POST">
+        {% csrf_token %}
+        <p>Nombre</p>
+        <input type="text" name="nombre" required>
+        <p>Presentacion</p>
+        <input type="number" name="presentacion" required>
+        <button style="color:blue">Enviar</button>
+    </form>
+ 
+
+
+{% endblock %}
